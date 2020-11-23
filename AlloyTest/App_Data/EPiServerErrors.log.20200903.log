@@ -1,0 +1,333 @@
+﻿2020-09-03 08:52:33,364 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Data.DataInitialization, EPiServer.Data, Version=11.15.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.Data.SqlClient.SqlException (0x80131904): Ett nätverksrelaterat eller instansspecifikt fel uppstod när en anslutning skulle upprättas till SQL Server. Servern hittades inte eller var inte tillgänglig. Kontrollera att instansnamnet är korrekt och att SQL Server är konfigurerad till att tillåta fjärranslutningar. (provider: SQL Network Interfaces, error: 50 - Ett fel inträffade i Local Database Runtime. Cannot create an automatic instance. See the Windows Application event log for error details.
+)
+   vid System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   vid System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   vid System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.Open()
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.<OpenConnection>b__15_0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.OpenConnection()
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.GetConnection(Boolean requireTransaction)
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.<>c__DisplayClass31_0`1.<Execute>b__0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionRetriever.GetDatabaseVersion(Boolean forceRefresh)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionValidator.GetStatus(IEnumerable`1 connectionStrings)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.<>c__DisplayClass6_0.<EnsureDatabaseSchema>b__0(ISchemaUpdater u)
+   vid System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   vid System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   vid System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   vid EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1983577832,State:0,Class:20
+System.Data.SqlClient.SqlException (0x80131904): Ett nätverksrelaterat eller instansspecifikt fel uppstod när en anslutning skulle upprättas till SQL Server. Servern hittades inte eller var inte tillgänglig. Kontrollera att instansnamnet är korrekt och att SQL Server är konfigurerad till att tillåta fjärranslutningar. (provider: SQL Network Interfaces, error: 50 - Ett fel inträffade i Local Database Runtime. Cannot create an automatic instance. See the Windows Application event log for error details.
+)
+   vid System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   vid System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   vid System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.Open()
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.<OpenConnection>b__15_0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.OpenConnection()
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.GetConnection(Boolean requireTransaction)
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.<>c__DisplayClass31_0`1.<Execute>b__0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionRetriever.GetDatabaseVersion(Boolean forceRefresh)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionValidator.GetStatus(IEnumerable`1 connectionStrings)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.<>c__DisplayClass6_0.<EnsureDatabaseSchema>b__0(ISchemaUpdater u)
+   vid System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   vid System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   vid System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   vid EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1983577832,State:0,Class:20
+2020-09-03 08:54:55,194 [14] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Data.DataInitialization, EPiServer.Data, Version=11.15.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.Data.SqlClient.SqlException (0x80131904): Ett nätverksrelaterat eller instansspecifikt fel uppstod när en anslutning skulle upprättas till SQL Server. Servern hittades inte eller var inte tillgänglig. Kontrollera att instansnamnet är korrekt och att SQL Server är konfigurerad till att tillåta fjärranslutningar. (provider: SQL Network Interfaces, error: 50 - Ett fel inträffade i Local Database Runtime. Cannot create an automatic instance. See the Windows Application event log for error details.
+)
+   vid System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   vid System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   vid System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.Open()
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.<OpenConnection>b__15_0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.OpenConnection()
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.GetConnection(Boolean requireTransaction)
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.<>c__DisplayClass31_0`1.<Execute>b__0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionRetriever.GetDatabaseVersion(Boolean forceRefresh)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionValidator.GetStatus(IEnumerable`1 connectionStrings)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.<>c__DisplayClass6_0.<EnsureDatabaseSchema>b__0(ISchemaUpdater u)
+   vid System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   vid System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   vid System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   vid EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1983577832,State:0,Class:20
+System.Data.SqlClient.SqlException (0x80131904): Ett nätverksrelaterat eller instansspecifikt fel uppstod när en anslutning skulle upprättas till SQL Server. Servern hittades inte eller var inte tillgänglig. Kontrollera att instansnamnet är korrekt och att SQL Server är konfigurerad till att tillåta fjärranslutningar. (provider: SQL Network Interfaces, error: 50 - Ett fel inträffade i Local Database Runtime. Cannot create an automatic instance. See the Windows Application event log for error details.
+)
+   vid System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   vid System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   vid System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.Open()
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.<OpenConnection>b__15_0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.OpenConnection()
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.GetConnection(Boolean requireTransaction)
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.<>c__DisplayClass31_0`1.<Execute>b__0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionRetriever.GetDatabaseVersion(Boolean forceRefresh)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionValidator.GetStatus(IEnumerable`1 connectionStrings)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.<>c__DisplayClass6_0.<EnsureDatabaseSchema>b__0(ISchemaUpdater u)
+   vid System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   vid System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   vid System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   vid EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1983577832,State:0,Class:20
+2020-09-03 08:56:11,000 [6] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Data.DataInitialization, EPiServer.Data, Version=11.15.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.Data.SqlClient.SqlException (0x80131904): Ett nätverksrelaterat eller instansspecifikt fel uppstod när en anslutning skulle upprättas till SQL Server. Servern hittades inte eller var inte tillgänglig. Kontrollera att instansnamnet är korrekt och att SQL Server är konfigurerad till att tillåta fjärranslutningar. (provider: SQL Network Interfaces, error: 50 - Ett fel inträffade i Local Database Runtime. Cannot create an automatic instance. See the Windows Application event log for error details.
+)
+   vid System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   vid System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   vid System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.Open()
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.<OpenConnection>b__15_0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.OpenConnection()
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.GetConnection(Boolean requireTransaction)
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.<>c__DisplayClass31_0`1.<Execute>b__0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionRetriever.GetDatabaseVersion(Boolean forceRefresh)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionValidator.GetStatus(IEnumerable`1 connectionStrings)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.<>c__DisplayClass6_0.<EnsureDatabaseSchema>b__0(ISchemaUpdater u)
+   vid System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   vid System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   vid System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   vid EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1983577832,State:0,Class:20
+System.Data.SqlClient.SqlException (0x80131904): Ett nätverksrelaterat eller instansspecifikt fel uppstod när en anslutning skulle upprättas till SQL Server. Servern hittades inte eller var inte tillgänglig. Kontrollera att instansnamnet är korrekt och att SQL Server är konfigurerad till att tillåta fjärranslutningar. (provider: SQL Network Interfaces, error: 50 - Ett fel inträffade i Local Database Runtime. Cannot create an automatic instance. See the Windows Application event log for error details.
+)
+   vid System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   vid System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   vid System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   vid System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   vid System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   vid System.Data.SqlClient.SqlConnection.Open()
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.<OpenConnection>b__15_0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.Providers.Internal.ConnectionContext.OpenConnection()
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.GetConnection(Boolean requireTransaction)
+   vid EPiServer.Data.Providers.Internal.SqlDatabaseExecutor.<>c__DisplayClass31_0`1.<Execute>b__0()
+   vid EPiServer.Data.Providers.SqlTransientErrorsRetryPolicy.Execute[TResult](Func`1 method)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionRetriever.GetDatabaseVersion(Boolean forceRefresh)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseVersionValidator.GetStatus(IEnumerable`1 connectionStrings)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.<>c__DisplayClass6_0.<EnsureDatabaseSchema>b__0(ISchemaUpdater u)
+   vid System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   vid System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   vid System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   vid EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(DataAccessOptions dataAccessOptions)
+   vid EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   vid EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   vid EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1983577832,State:0,Class:20
+2020-09-03 10:00:34,226 [13] ERROR EPiServer.Find.Cms.CmsUnifiedSearchSetUp: IAttachmentHelper can not be initiated.
+2020-09-03 10:00:36,558 [13] ERROR EPiServer.Find.Cms.ContentEventIndexer: An exception occurred while indexing (IContent). Det gick inte att matcha fjärrnamnet: 'your_uri'.
+System.Net.WebException: Det gick inte att matcha fjärrnamnet: 'your_uri'
+   vid System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   vid System.Net.HttpWebRequest.GetRequestStream()
+   vid EPiServer.Find.Json.Serializer.SerializeObjectsToJsonRequest(JsonSerializer serializer, IJsonRequest jsonRequest, IEnumerable values)
+   vid EPiServer.Find.Api.BulkCommand.Execute(List`1& serializationFailures)
+   vid EPiServer.Find.Api.BulkCommand.Execute()
+   vid EPiServer.Find.Cms.ContentIndexer.IndexWithRetry(IContent[] contents, Int32 maxRetries, Boolean deleteLanguageRoutingDuplicatesOnIndex)
+   vid EPiServer.Find.Cms.ContentIndexer.Index(IEnumerable`1 contents, IndexOptions options)
+   vid EPiServer.Find.Cms.ContentIndexer.IndexFrom(ContentReference contentLink, Boolean includeRootPage, IndexOptions indexOptions)
+   vid EPiServer.Find.Cms.ContentEventIndexer.Sync(IEnumerable`1 contentToIndex, HashSet`1 contentToIndexSet, Func`1 index)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue(IEnumerable`1 contentToIndex)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue()
+System.Net.WebException: Det gick inte att matcha fjärrnamnet: 'your_uri'
+   vid System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   vid System.Net.HttpWebRequest.GetRequestStream()
+   vid EPiServer.Find.Json.Serializer.SerializeObjectsToJsonRequest(JsonSerializer serializer, IJsonRequest jsonRequest, IEnumerable values)
+   vid EPiServer.Find.Api.BulkCommand.Execute(List`1& serializationFailures)
+   vid EPiServer.Find.Api.BulkCommand.Execute()
+   vid EPiServer.Find.Cms.ContentIndexer.IndexWithRetry(IContent[] contents, Int32 maxRetries, Boolean deleteLanguageRoutingDuplicatesOnIndex)
+   vid EPiServer.Find.Cms.ContentIndexer.Index(IEnumerable`1 contents, IndexOptions options)
+   vid EPiServer.Find.Cms.ContentIndexer.IndexFrom(ContentReference contentLink, Boolean includeRootPage, IndexOptions indexOptions)
+   vid EPiServer.Find.Cms.ContentEventIndexer.Sync(IEnumerable`1 contentToIndex, HashSet`1 contentToIndexSet, Func`1 index)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue(IEnumerable`1 contentToIndex)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue()
+2020-09-03 10:00:43,533 [13] ERROR EPiServer.Find.Cms.ContentEventIndexer: An exception occurred while indexing (IContent). Det gick inte att matcha fjärrnamnet: 'your_uri'.
+System.Net.WebException: Det gick inte att matcha fjärrnamnet: 'your_uri'
+   vid System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   vid System.Net.HttpWebRequest.GetRequestStream()
+   vid EPiServer.Find.Json.Serializer.SerializeObjectsToJsonRequest(JsonSerializer serializer, IJsonRequest jsonRequest, IEnumerable values)
+   vid EPiServer.Find.Api.BulkCommand.Execute(List`1& serializationFailures)
+   vid EPiServer.Find.Api.BulkCommand.Execute()
+   vid EPiServer.Find.Cms.ContentIndexer.IndexWithRetry(IContent[] contents, Int32 maxRetries, Boolean deleteLanguageRoutingDuplicatesOnIndex)
+   vid EPiServer.Find.Cms.ContentIndexer.Index(IEnumerable`1 contents, IndexOptions options)
+   vid EPiServer.Find.Cms.ContentEventIndexer.Index(IEnumerable`1 contentLinks)
+   vid EPiServer.Find.Cms.ContentEventIndexer.Sync(IEnumerable`1 contentToIndex, HashSet`1 contentToIndexSet, Func`1 index)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue(IEnumerable`1 contentToIndex)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue()
+System.Net.WebException: Det gick inte att matcha fjärrnamnet: 'your_uri'
+   vid System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   vid System.Net.HttpWebRequest.GetRequestStream()
+   vid EPiServer.Find.Json.Serializer.SerializeObjectsToJsonRequest(JsonSerializer serializer, IJsonRequest jsonRequest, IEnumerable values)
+   vid EPiServer.Find.Api.BulkCommand.Execute(List`1& serializationFailures)
+   vid EPiServer.Find.Api.BulkCommand.Execute()
+   vid EPiServer.Find.Cms.ContentIndexer.IndexWithRetry(IContent[] contents, Int32 maxRetries, Boolean deleteLanguageRoutingDuplicatesOnIndex)
+   vid EPiServer.Find.Cms.ContentIndexer.Index(IEnumerable`1 contents, IndexOptions options)
+   vid EPiServer.Find.Cms.ContentEventIndexer.Index(IEnumerable`1 contentLinks)
+   vid EPiServer.Find.Cms.ContentEventIndexer.Sync(IEnumerable`1 contentToIndex, HashSet`1 contentToIndexSet, Func`1 index)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue(IEnumerable`1 contentToIndex)
+   vid EPiServer.Find.Cms.ContentEventIndexer.IndexPageQueue()
+2020-09-03 10:08:36,878 [124] ERROR EPiServer.Global: Unhandled exception in ASP.NET
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.UI.Proxy.ProxyHttpHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.UI.Proxy.ProxyHttpHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2020-09-03 10:08:36,903 [126] ERROR EPiServer.Global: Unhandled exception in ASP.NET
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.UI.Proxy.ProxyHttpHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.UI.Proxy.ProxyHttpHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2020-09-03 10:08:36,913 [122] ERROR EPiServer.Global: Unhandled exception in ASP.NET
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.UI.Proxy.ProxyHttpHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at EPiServer.Find.UI.Proxy.ProxyHttpHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'your_uri'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
